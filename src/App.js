@@ -4,7 +4,15 @@ import { IonApp, IonRouterOutlet } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
-import Home from './pages/Home'
+import Login from './pages/Login'
+import Addresses from './pages/Addresses'
+import Map from './pages/Map'
+import Profile from './pages/Profile'
+import Register from './pages/Register'
+import Rides from './pages/Rides'
+import RidesHistory from './pages/RidesHistory'
+import Students from './pages/Students'
+import User from './pages/User'
 import store from './store'
 import theme from './config/theme'
 
@@ -33,12 +41,20 @@ const App = () => (
             <Provider store={store}>
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route path="/home" component={Home} exact />
+                        <Route path="/" component={Login} exact />
+                        <Route path="/addresses" component={Addresses} exact />
+                        <Route path="/map" component={Map} exact />
+                        <Route path="/profile" component={Profile} exact />
+                        <Route path="/register" component={Register} exact />
+                        <Route path="/rides" component={Rides} exact />
                         <Route
+                            path="/ridesHistory"
+                            component={RidesHistory}
                             exact
-                            path="/"
-                            render={() => <Redirect to="/home" />}
                         />
+                        <Route path="/students" component={Students} exact />
+                        <Route path="/user" component={User} exact />
+                        <Redirect to="/" />
                     </IonRouterOutlet>
                 </IonReactRouter>
             </Provider>
