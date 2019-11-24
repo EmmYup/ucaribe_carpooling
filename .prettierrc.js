@@ -1,1 +1,7 @@
-module.exports = { extends: ["plugin:prettier/recommended"] };
+module.exports = {
+    trailingComma: 'es5',
+    tabWidth: 4,
+    semi: false,
+    singleQuote: true,
+    extends: ['plugin:prettier/recommended'],
+}
