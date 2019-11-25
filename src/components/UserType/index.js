@@ -8,10 +8,14 @@ const UserType = () => {
             <IonGrid>
                 <IonRow>
                     <IonCol size="12">
-                        <IonButton size="full">Aventador</IonButton>
+                        <IonButton size="full" color="secondary">
+                            Aventador
+                        </IonButton>
                     </IonCol>
                     <IonCol size="12">
-                        <IonButton size="full">Aventado</IonButton>
+                        <IonButton size="full" color="secondary">
+                            Aventado
+                        </IonButton>
                     </IonCol>
                 </IonRow>
             </IonGrid>
