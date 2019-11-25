@@ -9,7 +9,7 @@ import Addresses from './pages/Addresses'
 import Map from './pages/Map'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
-import Rides from './pages/Rides'
+import Drivers from './pages/Drivers'
 import RidesHistory from './pages/RidesHistory'
 import Students from './pages/Students'
 import User from './pages/User'
@@ -41,19 +41,19 @@ const App = () => (
             <Provider store={store}>
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route path="/" component={Login} exact />
-                        <Route path="/addresses" component={Addresses} exact />
-                        <Route path="/map" component={Map} exact />
-                        <Route path="/profile" component={Profile} exact />
-                        <Route path="/register" component={Register} exact />
-                        <Route path="/rides" component={Rides} exact />
                         <Route
                             path="/ridesHistory"
                             component={RidesHistory}
                             exact
                         />
+                        <Route path="/addresses" component={Addresses} exact />
+                        <Route path="/map" component={Map} exact />
+                        <Route path="/profile" component={Profile} exact />
+                        <Route path="/register" component={Register} exact />
+                        <Route path="/drivers" component={Drivers} exact />
                         <Route path="/students" component={Students} exact />
                         <Route path="/user" component={User} exact />
+                        <Route path="/" component={Login} exact />
                         <Redirect to="/" />
                     </IonRouterOutlet>
                 </IonReactRouter>
