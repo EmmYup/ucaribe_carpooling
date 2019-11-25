@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { IonContent } from '@ionic/react'
 
 class Register extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Register extends Component {
 
     render() {
         const { pagina } = this.state
-        return <div>{`Hola Mundo! estas en: ${pagina}`}</div>
+        return <IonContent>{`Hola Mundo! estas en: ${pagina}`}</IonContent>
     }
 }
 
