@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import StudentRegisterForm from '../components/StudentRegisterForm/index'
+import DriverRegisterForm from '../components/DriverRegisterForm/index'
 import { IonContent } from '@ionic/react'
 
 class Register extends Component {
@@ -6,12 +8,22 @@ class Register extends Component {
         super(props)
         this.state = {
             pagina: 'Register',
+            userType: 'driver',
         }
     }
 
     render() {
-        const { pagina } = this.state
-        return <IonContent>{`Hola Mundo! estas en: ${pagina}`}</IonContent>
+        const { pagina, userType } = this.state
+        return (
+            <IonContent>
+                {userType === 'driver' ? (
+                    <DriverRegisterForm />
+                ) : (
+                    <StudentRegisterForm />
+                )}
+            </IonContent>
+        )
+
     }
 }
 
