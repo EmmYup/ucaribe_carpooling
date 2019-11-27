@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { IonContent } from '@ionic/react'
+import UserType from '../components/UserType/index'
 
 class User extends Component {
     constructor(props) {
@@ -10,7 +12,11 @@ class User extends Component {
 
     render() {
         const { pagina } = this.state
-        return <div>{`Hola Mundo! estas en: ${pagina}`}</div>
+        return (
+            <IonContent>
+                <UserType />
+            </IonContent>
+        )
     }
 }
 
