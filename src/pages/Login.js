@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { IonContent } from '@ionic/react'
+import LoginForm from '../components/LoginForm/index'
 
 class Login extends Component {
     constructor(props) {
@@ -7,10 +9,26 @@ class Login extends Component {
             pagina: 'Login',
         }
     }
+    onRegister = () => {
+        const { history } = this.props
+        history.push('/register')
+    }
+
+    onLogin = () => {
+        const { history } = this.props
+        history.push('/rides')
+    }
 
     render() {
         const { pagina } = this.state
-        return <div>{`Hola Mundo! estas en: ${pagina}`}</div>
+        return (
+            <IonContent>
+                <LoginForm
+                    onRegister={this.onRegister}
+                    onLogin={this.onLogin}
+                />
+            </IonContent>
+        )
     }
 }
 

@@ -23,6 +23,7 @@ class Register extends Component {
                 )}
             </IonContent>
         )
+
     }
 }
 
