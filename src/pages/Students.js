@@ -37,7 +37,6 @@ class Students extends Component {
     }
 
     render() {
-        const { pagina } = this.state
         return (
             <IonContent>
                 <StudentsList students={students} />

@@ -2,7 +2,7 @@ import React from 'react'
 import { IonInput, IonItem, IonButton } from '@ionic/react'
 import { Wrap } from './index.style'
 
-const DriverRegisterForm = () => {
+const DriverRegisterForm = ({ onDriverRegister }) => {
     return (
         <Wrap>
             <IonItem>
@@ -54,7 +54,11 @@ const DriverRegisterForm = () => {
                     placeholder="Color del Auto"
                 ></IonInput>
             </IonItem>
-            <IonButton color="secondary" size="full">
+            <IonButton
+                color="secondary"
+                size="full"
+                onClick={() => onDriverRegister()}
+            >
                 Continuar
             </IonButton>
         </Wrap>

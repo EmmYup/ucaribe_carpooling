@@ -5,16 +5,17 @@ import UserType from '../components/UserType/index'
 class User extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            pagina: 'User',
-        }
+        this.state = {}
+    }
+    handleUserType = type => {
+        const { history } = this.props
+        history.push(`/register/${type}`)
     }
 
     render() {
-        const { pagina } = this.state
         return (
             <IonContent>
-                <UserType />
+                <UserType handleUserType={this.handleUserType} />
             </IonContent>
         )
     }

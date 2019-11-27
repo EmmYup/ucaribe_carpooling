@@ -12,18 +12,31 @@ class Register extends Component {
         }
     }
 
+    onDriverRegister = () => {
+        console.log('holi')
+        const { history } = this.props
+        history.push('/students')
+    }
+    onStudentRegister = () => {
+        const { history } = this.props
+        history.push('/drivers')
+    }
+
     render() {
-        const { pagina, userType } = this.state
+        const { type } = this.props.match.params
         return (
             <IonContent>
-                {userType === 'driver' ? (
-                    <DriverRegisterForm />
+                {type === 'driver' ? (
+                    <DriverRegisterForm
+                        onDriverRegister={this.onDriverRegister}
+                    />
                 ) : (
-                    <StudentRegisterForm />
+                    <StudentRegisterForm
+                        onStudentRegister={this.onStudentRegister}
+                    />
                 )}
             </IonContent>
         )
-
     }
 }
 

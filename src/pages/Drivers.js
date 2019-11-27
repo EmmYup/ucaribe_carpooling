@@ -54,7 +54,6 @@ class Drivers extends Component {
     }
 
     render() {
-        const { pagina } = this.state
         return (
             <IonContent>
                 <DriversList drivers={drivers} />

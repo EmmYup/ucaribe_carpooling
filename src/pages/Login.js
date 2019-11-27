@@ -5,22 +5,19 @@ import LoginForm from '../components/LoginForm/index'
 class Login extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            pagina: 'Login',
-        }
+        this.state = {}
     }
     onRegister = () => {
         const { history } = this.props
-        history.push('/register')
+        history.push('/user')
     }
 
     onLogin = () => {
         const { history } = this.props
-        history.push('/rides')
+        history.push('/drivers')
     }
 
     render() {
-        const { pagina } = this.state
         return (
             <IonContent>
                 <LoginForm

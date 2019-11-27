@@ -2,7 +2,7 @@ import React from 'react'
 import { IonInput, IonItem, IonButton } from '@ionic/react'
 import { Wrap } from './index.style'
 
-const StudentRegisterForm = () => {
+const StudentRegisterForm = ({ onStudentRegister }) => {
     return (
         <Wrap>
             <IonItem>
@@ -33,7 +33,11 @@ const StudentRegisterForm = () => {
                     placeholder="Teléfono"
                 ></IonInput>
             </IonItem>
-            <IonButton color="secondary" size="full">
+            <IonButton
+                color="secondary"
+                size="full"
+                onClick={() => onStudentRegister()}
+            >
                 Continuar
             </IonButton>
         </Wrap>
