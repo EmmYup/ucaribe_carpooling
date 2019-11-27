@@ -41,19 +41,19 @@ const App = () => (
             <Provider store={store}>
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route path="/" component={Login} exact />
-                        <Route path="/addresses" component={Addresses} exact />
-                        <Route path="/map" component={Map} exact />
-                        <Route path="/profile" component={Profile} exact />
-                        <Route path="/register" component={Register} exact />
-                        <Route path="/rides" component={Rides} exact />
                         <Route
                             path="/ridesHistory"
                             component={RidesHistory}
                             exact
                         />
+                        <Route path="/addresses" component={Addresses} exact />
+                        <Route path="/map" component={Map} exact />
+                        <Route path="/profile" component={Profile} exact />
+                        <Route path="/register" component={Register} exact />
+                        <Route path="/rides" component={Rides} exact />
                         <Route path="/students" component={Students} exact />
                         <Route path="/user" component={User} exact />
+                        <Route path="/" component={Login} exact />
                         <Redirect to="/" />
                     </IonRouterOutlet>
                 </IonReactRouter>
