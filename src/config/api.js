@@ -9,6 +9,6 @@ const { get, post, put } = axios;
 export default {
     session: {
         login: credential => post('/login', { ...credential }),
-        signup: (type, params) => post(`/user/${type}`, { ...params }),
+        signup: ({ type, ...params }) => post(`/user/${type}`, { ...params }),
     },
 };

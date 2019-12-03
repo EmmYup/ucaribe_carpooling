@@ -1,45 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import StudentRegisterForm from '../components/StudentRegisterForm/index';
 import DriverRegisterForm from '../components/DriverRegisterForm/index';
 import { IonPage, IonContent } from '@ionic/react';
+import dispatcher from '../redux/Register/dispatcher';
 
-class Register extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            pagina: 'Register',
-            userType: 'driver',
-        };
-    }
+const Register = props => {
+    const { type } = props.match.params;
+    return (
+        <IonPage>
+            <IonContent>
+                {type === 'driver' ? (
+                    <DriverRegisterForm {...props} />
+                ) : (
+                    <StudentRegisterForm {...props} />
+                )}
+            </IonContent>
+        </IonPage>
+    );
+};
 
-    onDriverRegister = () => {
-        console.log('holi');
-        const { history } = this.props;
-        history.push('/students');
-    };
-    onStudentRegister = () => {
-        const { history } = this.props;
-        history.push('/drivers');
-    };
-
-    render() {
-        const { type } = this.props.match.params;
-        return (
-            <IonPage>
-                <IonContent>
-                    {type === 'driver' ? (
-                        <DriverRegisterForm
-                            onDriverRegister={this.onDriverRegister}
-                        />
-                    ) : (
-                        <StudentRegisterForm
-                            onStudentRegister={this.onStudentRegister}
-                        />
-                    )}
-                </IonContent>
-            </IonPage>
-        );
-    }
-}
-
-export default Register;
+export default connect(null, dispatcher)(Register);
