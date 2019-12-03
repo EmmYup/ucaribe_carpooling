@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { IonContent } from '@ionic/react'
-import DriversList from '../components/DriversList/index'
+import React, { Component } from 'react';
+import { IonPage, IonContent } from '@ionic/react';
+import DriversList from '../components/DriversList/index';
 
 const drivers = [
     {
@@ -43,23 +43,25 @@ const drivers = [
         destination: 'Av Andrés Quintana Roo',
         spacesLeft: 3,
     },
-]
+];
 
 class Drivers extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             pagina: 'Drivers',
-        }
+        };
     }
 
     render() {
         return (
-            <IonContent>
-                <DriversList drivers={drivers} />
-            </IonContent>
-        )
+            <IonPage>
+                <IonContent>
+                    <DriversList drivers={drivers} />
+                </IonContent>
+            </IonPage>
+        );
     }
 }
 
-export default Drivers
+export default Drivers;

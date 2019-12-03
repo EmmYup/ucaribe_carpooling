@@ -1,6 +1,6 @@
-import React from 'react'
-import { IonInput, IonItem, IonButton } from '@ionic/react'
-import { Wrap } from './index.style'
+import React from 'react';
+import { IonInput, IonItem, IonButton } from '@ionic/react';
+import { Wrap } from './index.style';
 
 const DriverRegisterForm = ({ onDriverRegister }) => {
     return (
@@ -62,7 +62,7 @@ const DriverRegisterForm = ({ onDriverRegister }) => {
                 Continuar
             </IonButton>
         </Wrap>
-    )
-}
+    );
+};
 
-export default DriverRegisterForm
+export default DriverRegisterForm;

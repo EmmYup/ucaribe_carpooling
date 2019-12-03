@@ -1,24 +1,26 @@
-import React, { Component } from 'react'
-import { IonContent } from '@ionic/react'
-import UserType from '../components/UserType/index'
+import React, { Component } from 'react';
+import { IonPage, IonContent } from '@ionic/react';
+import UserType from '../components/UserType/index';
 
 class User extends Component {
     constructor(props) {
-        super(props)
-        this.state = {}
+        super(props);
+        this.state = {};
     }
     handleUserType = type => {
-        const { history } = this.props
-        history.push(`/register/${type}`)
-    }
+        const { history } = this.props;
+        history.push(`/register/${type}`);
+    };
 
     render() {
         return (
-            <IonContent>
-                <UserType handleUserType={this.handleUserType} />
-            </IonContent>
-        )
+            <IonPage>
+                <IonContent>
+                    <UserType handleUserType={this.handleUserType} />
+                </IonContent>
+            </IonPage>
+        );
     }
 }
 
-export default User
+export default User;

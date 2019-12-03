@@ -3,7 +3,11 @@ module.exports = {
         browser: true,
         es6: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb'],
+    extends: [
+        'plugin:react/recommended',
+        'plugin:prettier/recommended',
+        'airbnb',
+    ],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
@@ -20,4 +24,4 @@ module.exports = {
         'react/jsx-filename-extension': 'off',
         'react/prop-types': 'off',
     },
-}
+};

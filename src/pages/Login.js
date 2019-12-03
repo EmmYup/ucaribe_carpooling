@@ -1,32 +1,17 @@
-import React, { Component } from 'react'
-import { IonContent } from '@ionic/react'
-import LoginForm from '../components/LoginForm/index'
+import React from 'react';
+import { connect } from 'react-redux';
+import { IonPage, IonContent } from '@ionic/react';
+import LoginForm from '../components/LoginForm/index';
+import dispatcher from '../redux/Login/dispatcher';
 
-class Login extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-    onRegister = () => {
-        const { history } = this.props
-        history.push('/user')
-    }
-
-    onLogin = () => {
-        const { history } = this.props
-        history.push('/drivers')
-    }
-
-    render() {
-        return (
+const Login = props => {
+    return (
+        <IonPage>
             <IonContent>
-                <LoginForm
-                    onRegister={this.onRegister}
-                    onLogin={this.onLogin}
-                />
+                <LoginForm {...props} />
             </IonContent>
-        )
-    }
-}
+        </IonPage>
+    );
+};
 
-export default Login
+export default connect(null, dispatcher)(Login);

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { IonContent } from '@ionic/react'
-import StudentsList from '../components/StudentsList/index'
+import React, { Component } from 'react';
+import { IonPage, IonContent } from '@ionic/react';
+import StudentsList from '../components/StudentsList/index';
 
 const students = [
     {
@@ -27,22 +27,24 @@ const students = [
         profileUrl: '',
         destination: 'Gran Plaza',
     },
-]
+];
 class Students extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             pagina: 'Students',
-        }
+        };
     }
 
     render() {
         return (
-            <IonContent>
-                <StudentsList students={students} />
-            </IonContent>
-        )
+            <IonPage>
+                <IonContent>
+                    <StudentsList students={students} />
+                </IonContent>
+            </IonPage>
+        );
     }
 }
 
-export default Students
+export default Students;
