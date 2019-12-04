@@ -61,7 +61,7 @@ class LoginForm extends Component {
                     ></IonInput>
                 </IonItem>
                 <IonButton
-                    color="secondary"
+                    color="dark"
                     expand="full"
                     onClick={this.handleLogin}
                 >

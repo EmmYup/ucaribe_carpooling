@@ -86,7 +86,7 @@ class StudentRegisterForm extends Component {
                     ></IonInput>
                 </IonItem>
                 <IonButton
-                    color="secondary"
+                    color="dark"
                     size="full"
                     onClick={this.handleRegister}
                 >
