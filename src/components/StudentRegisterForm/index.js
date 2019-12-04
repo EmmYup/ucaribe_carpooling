@@ -27,15 +27,12 @@ class StudentRegisterForm extends Component {
             state: { name, lastName, email, phone, password },
         } = this;
         onRegister({
-            params: {
-                name,
-                lastName,
-                email,
-                phone,
-                password,
-                type: 'student',
-            },
-            keys: ['name', 'lastName', 'email', 'phone', 'password', 'type'],
+            name,
+            lastName,
+            email,
+            phone,
+            password,
+            type: 'student',
         });
     };
 
