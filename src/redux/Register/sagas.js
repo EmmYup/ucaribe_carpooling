@@ -6,7 +6,6 @@ import filterParams from '../../config/filterParams';
 
 function* registerSaga({ payload }) {
     const { name, lastName, email, phone, password, type } = payload;
-
     try {
         const { data } = yield call(api.session.signup, {
             name,

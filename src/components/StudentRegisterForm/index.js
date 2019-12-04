@@ -27,12 +27,15 @@ class StudentRegisterForm extends Component {
             state: { name, lastName, email, phone, password },
         } = this;
         onRegister({
-            name,
-            lastName,
-            email,
-            phone,
-            password,
-            type: 'student',
+            params: {
+                name,
+                lastName,
+                email,
+                phone,
+                password,
+                type: 'student',
+            },
+            keys: ['name', 'lastName', 'email', 'phone', 'password', 'type'],
         });
     };
 
@@ -85,7 +88,11 @@ class StudentRegisterForm extends Component {
                         onIonChange={this.handleChange}
                     ></IonInput>
                 </IonItem>
-                <IonButton color="secondary" size="full">
+                <IonButton
+                    color="secondary"
+                    size="full"
+                    onClick={this.handleRegister}
+                >
                     Continuar
                 </IonButton>
             </Wrap>
