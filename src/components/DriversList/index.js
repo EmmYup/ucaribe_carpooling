@@ -1,10 +1,9 @@
-import React from 'react'
-import { IonList, IonItem, IonThumbnail, IonLabel } from '@ionic/react'
+import React from 'react';
+import { IonList, IonItem, IonThumbnail, IonLabel } from '@ionic/react';
 
 function DriversList({ drivers }) {
     return (
         <>
-            <h5>Rides</h5>
             <h3>Selecciona un ride</h3>
             <IonList>
                 {drivers.map(driver => (
@@ -22,7 +21,7 @@ function DriversList({ drivers }) {
                 ))}
             </IonList>
         </>
-    )
+    );
 }
 
-export default DriversList
+export default DriversList;

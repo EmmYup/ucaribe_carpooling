@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IonPage, IonContent } from '@ionic/react';
 import DriversList from '../components/DriversList/index';
+import Header from '../components/Header/index';
 
 const drivers = [
     {
@@ -53,10 +54,19 @@ class Drivers extends Component {
         };
     }
 
+    handlePrevPage = () => {
+        const { history } = this.props;
+        history.goBack();
+    };
+
     render() {
         return (
             <IonPage>
                 <IonContent>
+                    <Header
+                        handlePrevPage={this.handlePrevPage}
+                        title="Rides"
+                    />
                     <DriversList drivers={drivers} />
                 </IonContent>
             </IonPage>
