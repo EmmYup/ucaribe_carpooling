@@ -12,7 +12,7 @@ const Login = props => {
             <IonContent color="secondary">
                 <Alert
                     title="Error"
-                    message="Credenciales invalidas"
+                    message="Credenciales inválidas"
                     closeAlert={props.setAlert}
                     show={props.showAlert}
                 />

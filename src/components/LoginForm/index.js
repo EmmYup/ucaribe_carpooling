@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import { IonInput, IonItem, IonButton } from '@ionic/react';
 import {
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonInput,
-    IonItem,
-    IonButton,
-} from '@ionic/react';
-import { Wrap, FormText, RegisterTextContainer, Img } from './index.style';
+    Wrap,
+    FormText,
+    RegisterTextContainer,
+    Img,
+    TextsContainer,
+} from './index.style';
 
 class LoginForm extends Component {
     constructor(props) {
@@ -71,23 +70,17 @@ class LoginForm extends Component {
                 >
                     LOGIN
                 </IonButton>
-                <IonGrid>
-                    <IonRow>
-                        <IonCol size="6">
-                            <FormText>¿Olvidaste tu contraseña?</FormText>
-                        </IonCol>
-                        <IonCol size="6">
-                            <IonRow>
-                                <FormText>¿Nuevo Usuario?</FormText>
-                            </IonRow>
-                            <RegisterTextContainer>
-                                <FormText onClick={this.onRegister}>
-                                    REGISTRATE
-                                </FormText>
-                            </RegisterTextContainer>
-                        </IonCol>
-                    </IonRow>
-                </IonGrid>
+                <TextsContainer>
+                    <FormText>¿Olvidaste tu contraseña?</FormText>
+                    <div>
+                        <FormText>¿Nuevo Usuario?</FormText>
+                        <RegisterTextContainer>
+                            <FormText onClick={this.onRegister}>
+                                REGISTRATE
+                            </FormText>
+                        </RegisterTextContainer>
+                    </div>
+                </TextsContainer>
             </Wrap>
         );
     }

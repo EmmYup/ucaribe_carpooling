@@ -18,3 +18,8 @@ export const RegisterTextContainer = styled(IonRow)`
 export const Img = styled(IonImg)`
     margin-bottom: 15%;
 `;
+
+export const TextsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
