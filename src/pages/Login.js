@@ -7,8 +7,6 @@ import dispatcher from '../redux/Login/dispatcher';
 import selectors from '../redux/Login/selectors';
 
 const Login = props => {
-    console.log(props);
-
     return (
         <IonPage>
             <IonContent color="secondary">
@@ -23,7 +21,5 @@ const Login = props => {
         </IonPage>
     );
 };
-
-const mapStateToProps = ({ login: { showAlert } }) => ({ showAlert });
 
 export default connect(selectors.propsSelector, dispatcher)(Login);
