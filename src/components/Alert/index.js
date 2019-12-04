@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IonAlert } from '@ionic/react';
 
-const Alert = ({ title, message }) => {
-    const [showAlert1, setShowAlert1] = useState(false);
+const Alert = ({ title, message, closeAlert, show }) => {
     return (
         <IonAlert
-            isOpen={showAlert1}
-            onDidDismiss={() => setShowAlert1(false)}
+            isOpen={show}
+            onDidDismiss={closeAlert}
             subHeader={title}
             message={message}
             buttons={['OK']}

@@ -4,7 +4,7 @@ import { IonRow, IonImg } from '@ionic/react';
 export const Wrap = styled.div`
     position: absolute;
     left: 5%;
-    top: 10%;
+    top: 20%;
     width: 90%;
 `;
 export const FormText = styled.p`
