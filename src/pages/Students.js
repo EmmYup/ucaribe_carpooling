@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IonPage, IonContent } from '@ionic/react';
 import StudentsList from '../components/StudentsList/index';
+import Header from '../components/Header/index';
 
 const students = [
     {
@@ -36,10 +37,31 @@ class Students extends Component {
         };
     }
 
+    handlePrevPage = () => {
+        const { history } = this.props;
+        history.goBack();
+    };
+
+    redirectToProfile = () => {
+        const { history } = this.props;
+        history.push('/profile/id');
+    };
+
+    redirectToAddress = () => {
+        const { history } = this.props;
+        history.push('/addresses/id');
+    };
+
     render() {
         return (
             <IonPage>
                 <IonContent>
+                    <Header
+                        handlePrevPage={this.handlePrevPage}
+                        redirectToProfile={this.redirectToProfile}
+                        redirectToAddress={this.redirectToAddress}
+                        title="Solicitudes"
+                    />
                     <StudentsList students={students} />
                 </IonContent>
             </IonPage>

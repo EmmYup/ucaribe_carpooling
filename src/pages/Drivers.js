@@ -59,12 +59,24 @@ class Drivers extends Component {
         history.goBack();
     };
 
+    redirectToProfile = () => {
+        const { history } = this.props;
+        history.push('/profile/id');
+    };
+
+    redirectToAddress = () => {
+        const { history } = this.props;
+        history.push('/addresses/id');
+    };
+
     render() {
         return (
             <IonPage>
                 <IonContent>
                     <Header
                         handlePrevPage={this.handlePrevPage}
+                        redirectToProfile={this.redirectToProfile}
+                        redirectToAddress={this.redirectToAddress}
                         title="Rides"
                     />
                     <DriversList drivers={drivers} />

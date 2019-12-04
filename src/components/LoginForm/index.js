@@ -7,7 +7,7 @@ import {
     IonItem,
     IonButton,
 } from '@ionic/react';
-import { Wrap, FormText, RegisterTextContainer } from './index.style';
+import { Wrap, FormText, RegisterTextContainer, Img } from './index.style';
 
 class LoginForm extends Component {
     constructor(props) {
@@ -42,6 +42,10 @@ class LoginForm extends Component {
         const { email, password } = this.state;
         return (
             <Wrap>
+                <Img
+                    src="https://www.carrerasenlinea.mx/logos/original/logo-universidad-del-caribe.png"
+                    alt=""
+                />
                 <IonItem>
                     <IonInput
                         name="email"

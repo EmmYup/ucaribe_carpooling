@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
+import { IonPage, IonContent } from '@ionic/react';
+import Header from '../components/Header/index';
+import AddressList from '../components/AddressList/index';
 
 class Addresses extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            pagina: 'Addresses',
-        };
+        this.state = {};
     }
 
+    handlePrevPage = () => {
+        const { history } = this.props;
+        history.goBack();
+    };
+
     render() {
-        const { pagina } = this.state;
-        return <div>{`Hola Mundo! estas en: ${pagina}`}</div>;
+        return (
+            <IonPage>
+                <IonContent>
+                    <Header
+                        handlePrevPage={this.handlePrevPage}
+                        title="Mis Direcciones"
+                    />
+                    <AddressList />
+                </IonContent>
+            </IonPage>
+        );
     }
 }
 

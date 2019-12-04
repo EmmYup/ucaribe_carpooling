@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:1337';
 
 axios.defaults.baseUrl = API_URL;
 
-const { get, post, put } = axios;
+const { post } = axios;
 
 export default {
     session: {
